@@ -26,7 +26,11 @@ const Home = (): JSX.Element => {
   const { addProduct, cart } = useCart();
 
   const cartItemsAmount = cart.reduce((sumAmount, product) => {
+<<<<<<< HEAD
     const newSumAmount = {...sumAmount}
+=======
+    const newSumAmount = { ...sumAmount }
+>>>>>>> 054940cd480b8512971c3c9679fbde8eb9bd0af4
     newSumAmount[product.id] = product.amount;
     return newSumAmount;
   }, {} as CartItemsAmount);
@@ -52,10 +56,13 @@ const Home = (): JSX.Element => {
     addProduct(id);
   }
 
+<<<<<<< HEAD
   useEffect(() => {
     console.log(cartItemsAmount);
   }, [cartItemsAmount]);
 
+=======
+>>>>>>> 054940cd480b8512971c3c9679fbde8eb9bd0af4
   return (
     <ProductList>
       {products.map((product) => (
